@@ -1,8 +1,9 @@
 import React from 'react'
 import assets from '../assets/assets'
-
+import Title from './Title'
+import ServiceCard from './ServiceCard'
 const Services = () => {
-    const ServoceData = [
+    const ServiceData = [
         {
             title: "Advertising",
             description: 'We turn bold ideas into powerful digital solutions that create, engage...',
@@ -29,6 +30,9 @@ const Services = () => {
           <img src={assets.bgImage2} className='absolute -top-110 -left-70 -z-1 dakr:hidden' />
           <Title title='How can we Help' desc='From strategy to execution, we craft digital
           solutions that move your business forward.'/>
+      <div className='flex flex-col md:grid grid-cols-2'>
+        {ServiceData.map((service, i) => (<ServiceCard key={i} service={service} i={i} />))}
+      </div>
     </div>
   )
 }
