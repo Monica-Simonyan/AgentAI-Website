@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import TrustBy from './components/TrustBy'
 import Services from './components/Services'
+import OurWork from './components/OurWork'
 function App() {
   const [theme, setTheme] = useState(localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light')
   return (
@@ -11,7 +12,8 @@ function App() {
       <Navbar theme={theme} setTheme={setTheme} />
       <Hero />
       <TrustBy />
-      <Services/>
+      <Services />
+      <OurWork/>
     </div>
   )
 }
