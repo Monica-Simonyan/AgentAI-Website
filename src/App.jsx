@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
@@ -11,6 +11,8 @@ import {Toaster} from 'react-hot-toast'
 import Footer from './components/Footer'
 function App() {
   const [theme, setTheme] = useState(localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light')
+  const dotRef = useRef(null)
+  const outlineRef = useRef(null)
   return (
     <div className='dark:bg-black relative'>
       <Toaster/>
@@ -22,6 +24,13 @@ function App() {
       <Teams />
       <ContactUs />
       <Footer theme={theme} />
+      {/* Cursor ring */}
+      <div ref={outlineRef} className='fixed top-0 left-0 w-10 rounded-full border border-primary pointer-events-none z-[9999]'>
+        {/* Custom cursor dot */}
+        <div ref={dotRef} className='fixed top-0 left-0 h-3 w-3 rounded-full bg-primary pointer-events-nonen z-[9999]'>
+          
+      </div>
+      </div>
     </div>
   )
 }
