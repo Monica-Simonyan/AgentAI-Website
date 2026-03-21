@@ -11,9 +11,9 @@ const Footer = ({theme}) => {
           viewport={{once:true}}>
           <div className='flex justify-between lg:items-center max-lg:flex-col gap-10'>
               <motion.div className='space-y-5 text-sm text-gray-700 dark:text-gray-400'
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay:0.2}}
+              initial={{ opacity: 0, x:-30 }}
+              whileInView={{ opacity: 1, x:0 }}
+              transition={{ duration: 0.6, delay:0.3}}
               viewport={{once:true}}>
                   <img src={theme === 'dark' ? assets.logo_dark : assets.logo} className='w-32 sm:w-44' alt=''/>
                   <p className='max-w-md'>From strategy to execution, we craft digital
