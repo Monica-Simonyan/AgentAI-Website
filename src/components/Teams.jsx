@@ -5,7 +5,7 @@ import assets, { teamData } from '../assets/assets'
 const Teams = () => {
   return (
       <div className='flex flex-col items-center gap-7 px-4 sm:px-12
-      lg:pc-24 xl:px-40 pt-30 text-gray-800 dark:text-white'>
+      lg:pc-24 xl:px-40 pt-30 text-gray-800 dark:text-white' id="teams">
           <Title title='Meet the team' desc='Passioante team of digital experts dedicated to your brand success.' />
           <div className='grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-5'>
               {teamData.map((team, index) => (
