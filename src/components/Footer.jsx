@@ -9,7 +9,7 @@ const Footer = ({theme}) => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8}}
           viewport={{once:true}}>
-          <div className='flex justify-between lg:items-center max-lg:flex-col gap-10'>
+          <div className='flex flex-col lg:flex-row lg:items-start gap-10 max-w-7xl mx-auto px-4 sm:px-10 lg:px-24 xl:px-0"'>
               <motion.div className='space-y-5 text-sm text-gray-700 dark:text-gray-400'
               initial={{ opacity: 0, x:-30 }}
               whileInView={{ opacity: 1, x:0 }}
