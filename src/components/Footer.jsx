@@ -25,7 +25,11 @@ const Footer = ({theme}) => {
                        <li><a className='hover:text-primary' href="#contact-us">Contact us</a></li>
                   </ul>
               </motion.div>
-              <div className='text-gray-600 dark:text-gray-400'>
+              <motion.div className='text-gray-600 dark:text-gray-400'
+              initial={{ opacity: 0, x:30 }}
+              whileInView={{ opacity: 1, x:0 }}
+              transition={{ duration: 0.6, delay:0.3}}
+              viewport={{once:true}}>
                   <h3 className='font-semibold'>Subscribe to our newsletter</h3>
                   <p className='text-sm mt-2 mb-6'>The latest news, articles, and resources, sent to your inbox weekly</p>
                   <div className='flex gap-2 text-sm'>
@@ -33,7 +37,7 @@ const Footer = ({theme}) => {
                       rounded dark:text-gray-200 bg-transparent border border-gray-300 dark;border-gray-500'/>
                       <button className='bg-primary text-white rounded px-6'>Subscribe</button>
                   </div>
-              </div>
+              </motion.div>
           </div>
           <hr className='border-gray-300 dark:border-gray-600 my-6'></hr>
           <div className='pb-6 text-sm text-gray-500 flex justify-center sm:justify-between gap-4 flex-wrap'>
